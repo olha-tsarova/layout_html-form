@@ -11,7 +11,9 @@
   <body>
     <form
       action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-      method="POST" autocomplete="off">
+      method="POST"
+      autocomplete="off"
+    >
       <fieldset class="fieldset">
         <legend>Personal information</legend>
 
@@ -20,7 +22,8 @@
           for="surname"
         >
           Surname:
-          <input type="text"
+          <input
+            type="text"
             name="surname"
             id="surname"
           >
@@ -170,25 +173,11 @@
             id="cars"
             multiple
           >
-            <option value="BMW">
-              BMW
-            </option>
+            <option value="BMW">BMW</option>
 
-            <option value="Audi">
-              Audi
-            </option>
+            <option value="Audi">Audi</option>
 
-            <option value="Lada">
-              Lada
-            </option>
-
-            <option
-              value=""
-              disabled
-              selected
-            >
-
-            </option>
+            <option value="Lada">Lada</option>
           </select>
         </label>
 
@@ -201,6 +190,9 @@
             type="range"
             name="rate"
             id="rate"
+            min="1"
+            max="10"
+            step="1"
           >
         </label>
       </fieldset>
@@ -229,17 +221,16 @@
             name="recommend"
             id="recommend"
           >
-            <option value="yes">
-              yes
-            </option>
+            <option value="yes">yes</option>
 
-            <option value="no">
-              no
-            </option>
+            <option value="no">no</option>
           </select>
         </label>
       </fieldset>
-      <button type="submit">
+      <button
+        type="submit"
+        onsubmit="onSubmit()"
+      >
         Submit
       </button>
     </form>
